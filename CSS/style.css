@@ -1,3 +1,45 @@
+html {
+  line-height: 1.5;
+}
+/* HEADER */
+.header_content nav li {
+  padding: 0 17px;
+}
+.header_content nav a {
+  transition: all 0.5s;
+}
+.header_content nav a:hover {
+  color: #4f47e5;
+}
+.header i {
+  display: inline-block;
+  font-size: 10px;
+}
+
+/* CAROUSEL */
+.carousel_button a {
+  padding: 10px 28px;
+  border-radius: 30px;
+  border: 2px solid #6366f1;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+/* FEATURE */
+.feature_item ul li i {
+  color: white;
+  background-color: black;
+  border: 1px solid transparent;
+  border-radius: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2px;
+  vertical-align: middle;
+  margin-right: 15px;
+  font-size: 10px;
+}
 /* client */
 .client__item img {
   width: 48px;
@@ -28,7 +70,7 @@
     transparent 80%
   );
 }
-/* 
+
 /* Gallery */
 .gallery__item {
   background-color: rgba(128, 128, 128, 0.03);
@@ -70,7 +112,7 @@
   .animate__move {
     display: flex;
     width: max-content;
-    animation: move 40s linear infinite;
+    animation: move 50s linear infinite;
   }
   .gallery__content1 .gallery__content2 {
     grid-template-columns: repeat(2, 1fr);
