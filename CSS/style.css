@@ -40,3 +40,106 @@ html {
   margin-right: 15px;
   font-size: 10px;
 }
+/* client */
+.client__item img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.client__item {
+  padding: 20px;
+  background-color: rgba(229, 231, 235, 0.238);
+  border: 1px solid white;
+  border-radius: 15px;
+  /* box-shadow: 0 10px 25px rgb(0, 0, 0, 0.05); */
+  transition: all;
+}
+.client__item:hover {
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.bg-gradient {
+  background: radial-gradient(
+    circle at center,
+    rgba(99, 102, 241, 0.25) 0%,
+    rgba(99, 102, 241, 0.15) 30%,
+    rgba(99, 102, 241, 0.05) 60%,
+    transparent 80%
+  );
+}
+
+/* Gallery */
+.gallery__item {
+  background-color: rgba(128, 128, 128, 0.03);
+  border: 1 solid;
+  border-radius: 16px;
+  padding: 32px;
+  transition: all 0.5s;
+}
+
+/* footer */
+.footer__info ul li {
+  margin-top: 15px;
+  color: slategray;
+  font-size: 14px;
+}
+.footer__info ul li:hover {
+  color: blue;
+}
+.footer__bot {
+  position: relative;
+}
+.footer__bot::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(128, 128, 128, 0.079);
+}
+@keyframes move {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(calc(-100%));
+  }
+}
+@media (min-width: 768px) {
+  .animate__move {
+    display: flex;
+    width: max-content;
+    animation: move 50s linear infinite;
+  }
+  .gallery__content1 .gallery__content2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .title {
+    font-size: 48px;
+  }
+  .gallery__content1 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .gallery__content2 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer__top {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .footer__item {
+    grid-column: 1 / span 2;
+  }
+}
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
