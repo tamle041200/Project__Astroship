@@ -2,9 +2,6 @@ html {
   line-height: 1.5;
 }
 /* HEADER */
-.header_content nav li {
-  padding: 0 17px;
-}
 .header_content nav a {
   transition: all 0.5s;
 }

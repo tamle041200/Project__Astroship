@@ -28,8 +28,11 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="py-5 border-b border-gray-200 fixed z-50 w-full bg-white">
-      <div class="container mx-auto md:px-0">
+    <header
+      id="navbar"
+      class="py-5 border-b border-gray-200 fixed z-50 w-full bg-[#fffc]"
+    >
+      <div class="container mx-auto px-5 md:px-0">
         <div class="header_content flex justify-between items-center">
           <div class="header_left flex-shrink-0">
             <a href="#" class="flex items-center">
@@ -43,11 +46,34 @@
           </div>
 
           <nav class="hidden lg:flex">
-            <ul class="flex gap-6 text-[14px] text-gray-600 font-medium">
-              <li>
-                <a href="#" class="hover:text-indigo-600 transition"
-                  >Pages <i class="fa-solid fa-chevron-down text-[10px]"></i
-                ></a>
+            <ul class="flex gap-10 text-sm text-gray-600">
+              <li class="relative">
+                <button
+                  id="dropdownNavbarLink"
+                  data-dropdown-toggle="dropdownNavbar"
+                  class="hover:text-indigo-600 transition"
+                >
+                  Pages <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                </button>
+                <div id="dropdownNavbar" class="z-10 hidden font-normal">
+                  <ul
+                    class="absolute -right-40 bg-white text-sm text-gray-700 rounded-lg shadow-lg border-state-200 w-50 pl-3 py-3"
+                    aria-labelledby="dropdownLargeButton"
+                  >
+                    <li>
+                      <a href="#" class="block mb-3">Features</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block mb-3">Integrations</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block mb-3">Blog Details</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block">404 Page</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li>
                 <a href="#" class="hover:text-indigo-600 transition">Pricing</a>
@@ -72,9 +98,7 @@
                 href="#"
               >
                 <span class="whitespace-nowrap">Try for Free</span>
-                <span
-                  class="inline-flex items-center justify-center bg-white/20 rounded-full w-5 h-5"
-                >
+                <span class="inline-flex items-center justify-center w-5 h-5">
                   <i class="fa-solid fa-chevron-right text-[10px]"></i>
                 </span>
               </a>
@@ -89,31 +113,35 @@
 
     <!-- Caurosel -->
     <section class="carousel pt-20 overflow-x-hidden">
-      <div class="container mx-auto">
-        <div class="carousel_content flex items-center">
-          <div class="carousel_left w-2/4">
-            <h1 class="text-3xl lg:text-4xl xl:text-6xl font-bold">
-              Create websites with Astroship™
-            </h1>
-            <p class="mt-4 text-lg text-[#475569]">
-              Pro version of popular Astroship starter template made for
-              startups. Built with Astro and Tailwind CSS.
-            </p>
-            <div class="carousel_button mt-6 flex gap-3">
-              <a
-                class="bg-indigo-500 hover:bg-indigo-800 border outline-none text-white"
-                href="#"
-                >Buy Template — $49</a
+      <div class="container px-5 md:px-0 mx-auto">
+        <div class="carousel_content md:flex items-center">
+          <div class="carousel_left md:w-2/4">
+            <div>
+              <h1 class="text-3xl md:text-4xl lg:text-6xl font-bold">
+                Create websites with Astroship™
+              </h1>
+              <p class="mt-4 text-lg text-[#475569]">
+                Pro version of popular Astroship starter template <br />
+                made for startups. Built with Astro and Tailwind CSS.
+              </p>
+              <div
+                class="carousel_button mt-6 flex flex-col md:flex-row lg:justify-start gap-3"
               >
-              <a class="text-[#6366f1] hover:bg-[#EEF2FF]" href="#"
-                >Free - Version</a
-              >
+                <a
+                  class="bg-indigo-500 hover:bg-indigo-800 border outline-none text-white"
+                  href="#"
+                  >Buy Template — $49</a
+                >
+                <a class="text-[#6366f1] hover:bg-[#EEF2FF]" href="#"
+                  >Free - Version</a
+                >
+              </div>
             </div>
           </div>
-          <div class="carousel_right -mr-40 py-3">
+          <div class="carousel_right xl:-mr-40 py-3">
             <img
               src="./IMG/hero-screenshot.dpXn-2za_ZMevfI.png"
-              alt="img_hero-screenshot"
+              alt="img_hero-screenshot.dpXn-2za_ZMevfI.png"
             />
           </div>
         </div>
@@ -121,12 +149,12 @@
     </section>
     <!-- Logo -->
     <section class="logo">
-      <div class="container mx-auto">
+      <div class="container mx-auto px-5 md:px-0">
         <p class="text-[#64748B] text-[16px] text-center">
           Trusted by popular startups you know
         </p>
         <div
-          class="logo_content flex justify-center items-center gap-x-8 gap-y-4 md:gap-20 lg:gap-28"
+          class="logo_content grid grid-colds-2 md:grid-cols-4 md:gap-8 items-center justify-items-center mt-10"
         >
           <div class="logo_item">
             <svg
@@ -311,14 +339,16 @@
 
     <!-- Feature -->
     <section class="feature mt-24">
-      <div class="container mx-auto">
+      <div class="container mx-auto px-5 md:px-0">
         <div class="feature_title text-center">
           <p
             class="inline-block px-3 py-1 border rounded-full border-purple-200 text-xs text-[#9333EA] bg-purple-100"
           >
             TWO-COL FEATURES
           </p>
-          <h2 class="text-5xl font-bold mt-4">Supercharge Your Workflows</h2>
+          <h2 class="text-4xl lg:text-5xl font-bold mt-4">
+            Supercharge Your Workflows
+          </h2>
           <p class="mt-4 text-lg text-slate-600">
             Unlock your team's true potential with our state-of-the-art SaaS
             platform. From intelligent task <br />
@@ -327,9 +357,14 @@
             streamline your workflows and achieve high productivity.
           </p>
         </div>
-        <div class="feature_content grid grid-cols-2 py-10 px-10 items-center">
+        <div
+          class="feature_content grid md:grid-cols-2 py-10 px-10 items-center"
+        >
           <div class="feature_item">
-            <img src="./IMG/6.SnSOjqTF_od5cr.png" alt="" />
+            <img
+              src="./IMG/6.SnSOjqTF_od5cr.png"
+              alt="img_6.SnSOjqTF_od5cr.png"
+            />
           </div>
           <div class="feature_item pl-20">
             <p
@@ -375,7 +410,9 @@
             </div>
           </div>
         </div>
-        <div class="feature_content grid grid-cols-2 py-10 pl-20 items-center">
+        <div
+          class="feature_content grid md:grid-cols-2 py-10 pl-20 items-center"
+        >
           <div class="feature_item">
             <p
               class="inline-block px-3 py-1 border rounded-full border-purple-200 text-xs text-[#9333EA] bg-purple-100"
@@ -420,7 +457,10 @@
             </div>
           </div>
           <div class="feature_item">
-            <img src="./IMG/2.CV1PrsFe_21aLfe.png" alt="" />
+            <img
+              src="./IMG/2.CV1PrsFe_21aLfe.png"
+              alt="img_2.CV1PrsFe_21aLfe.png"
+            />
           </div>
         </div>
       </div>
@@ -438,5 +478,20 @@
 
     <!-- Flowbite -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script>
+      window.addEventListener("scroll", function () {
+        const header = document.getElementById("navbar");
+
+        if (window.scrollY > 20) {
+          // Thêm border, shadow và thu nhỏ padding khi cuộn
+          header.classList.add("border-b", "border-gray-200", "py-2");
+          header.classList.remove("py-4");
+        } else {
+          // Trở về trạng thái ban đầu
+          header.classList.remove("border-b", "border-gray-200", "py-2");
+          header.classList.add("py-4");
+        }
+      });
+    </script>
   </body>
 </html>
